@@ -16,6 +16,7 @@
             <?php $no = 1; ?>
             <?php foreach ($mahasiswa as $mhs) : ?>
                 <tr>
+                    
                     <th scope="row"><?= $no ?></th>
                     <td><?= $mhs['npm'] ?></td>
                     <td><?= $mhs['nama'] ?></td>
