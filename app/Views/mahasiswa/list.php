@@ -5,7 +5,8 @@
 
 <div class="p-4">
     <h3>Data Mahasiswa</h3>
-    <a href="/create" type="button" class="btn btn-primary">Tambah</a>
+    <br><br>
+    <a href="/create" type="button" class="btn btn-primary"><i class="fa fa-plus mr-2" aria-hidden="true"></i>Tambah Data</a>
     <br><br>
     <table class=" table table-striped table-dark">
         <thead>
@@ -32,10 +33,10 @@
                     <td><?= $mhs['created_at'] ?></td>
                     <td>
                         <div class="d-flex">
-                            <a class="mr-3 bi bi-pencil-square" href="/edit/<?= $mhs['id'] ?>">Edit</a>
+                            <a class="btn btn-warning mr-3" href="/edit/<?= $mhs['id'] ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                             <form action="/delete/<?= $mhs['id'] ?>" method="post">
                                 <input type="hidden" name="_methode" value="DELETE">
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
                             </form>
                         </div>
                     </td>

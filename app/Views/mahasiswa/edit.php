@@ -1,7 +1,10 @@
 <?= $this->extend('templates/template'); ?>
 <?= $this->section('content'); ?>
+
+
+
 <div class="P-4">
-    <div class="container" mt-3 mb-3>
+    <div class="container" mt-5 mb-3>
         <div class="row">
             <div class="col-6">
                 <form action="/update/<?= $mahasiswa['id'] ?>" method="POST">

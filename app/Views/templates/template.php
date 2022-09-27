@@ -10,6 +10,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AdminLTE 3 | Top Navigation</title>
 
+    <!-- href icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
     <!-- summer note -->
     <link rel="stylesheet" href="/assets/adminlte//plugins/summernote/summernote-bs4.min.css">
 
@@ -25,11 +28,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="wrapper">
 
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+        <nav class="main-header navbar navbar-expand-md navbar-light navbar-white mb-3">
             <div class="container">
                 <a href="/assets/adminlte/index3.html" class="navbar-brand">
-                    <img src="/assets/adminlte/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                    <span class="brand-text font-weight-light">AdminLTE 3</span>
+                    <img src="/assets/adminlte/dist/img/akucintaunila.png" alt="Love Karomani" class="brand-image img-square elevation-3" style="opacity: .8">
+                    <span class="brand-text font-weight-light">Love Karomani</span>
                 </a>
 
                 <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

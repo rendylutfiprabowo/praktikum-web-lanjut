@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-    <button type="submit" class="btn btn-primary">Tambah Data</button>
+    <button type="submit" class="btn btn-primary"><i class="fa fa-plus mr-2" aria-hidden="true"></i>Tambah Data</button>
     </form>
 
 </div>
