@@ -1,84 +1,130 @@
+Berikut versi yang **rapih dan lebih profesional** dari README GitHub kamu, lengkap dengan penulisan kode yang sesuai (menggunakan triple backticks \`\`\` untuk syntax highlighting):
+
+---
+
 # CodeIgniter 4 Application Starter
 
 ## What is CodeIgniter?
 
-how to set-up?
+CodeIgniter is a PHP full-stack web framework that is lightweight, fast, flexible, and secure.
+More information can be found at the [official website](http://codeigniter.com).
 
-1. download .zip file
-2. open terminal in your directory file
-3. run "composer install" not "composer update"
-4. open file vendor\codeigniter4\framework\system\Events\Events.php
-5. change from :
-   '''
-   define('EVENT_PRIORITY_LOW', 200);
-   define('EVENT_PRIORITY_NORMAL', 100);
-   define('EVENT_PRIORITY_HIGH', 10);
-   ''''
-   to:
-   '''
-   defined('EVENT_PRIORITY_LOW') || define('EVENT_PRIORITY_LOW', 200);
-   defined('EVENT_PRIORITY_NORMAL')|| define('EVENT_PRIORITY_NORMAL', 100);
-   defined('EVENT_PRIORITY_HIGH') || define('EVENT_PRIORITY_HIGH', 10);
-   '''
-   
-   database = web-lanjut
+This repository contains a composer-installable app starter for CodeIgniter 4.
+It has been built from the [development repository](https://github.com/codeigniter4/CodeIgniter4).
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+Refer to the [user guide](https://codeigniter4.github.io/userguide/) for full documentation.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+---
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+## 🚀 Quick Setup Guide
 
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+### 1. Download & Install
 
-## Installation & updates
+- Download the `.zip` file of this repository.
+- Extract the contents.
+- Open a terminal in the project directory.
+- Run the following command (⚠️ use `install`, not `update`):
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+```bash
+composer install
+```
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+---
 
-## Setup
+### 2. Fix Events Constant Conflict (if needed)
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+If you encounter this error:
 
-## Important Change with index.php
+```
+Constant EVENT_PRIORITY_LOW already defined
+```
 
-`index.php` is no longer in the root of the project! It has been moved inside the _public_ folder,
-for better security and separation of components.
+Do the following steps:
 
-This means that you should configure your web server to "point" to your project's _public_ folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter _public/..._, as the rest of your logic and the
-framework are exposed.
+- Open this file:
 
-**Please** read the user guide for a better explanation of how CI4 works!
+  ```
+  vendor/codeigniter4/framework/system/Events/Events.php
+  ```
 
-## Repository Management
+- Change this:
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+```php
+define('EVENT_PRIORITY_LOW', 200);
+define('EVENT_PRIORITY_NORMAL', 100);
+define('EVENT_PRIORITY_HIGH', 10);
+```
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+- To this:
 
-## Server Requirements
+```php
+defined('EVENT_PRIORITY_LOW')   || define('EVENT_PRIORITY_LOW', 200);
+defined('EVENT_PRIORITY_NORMAL')|| define('EVENT_PRIORITY_NORMAL', 100);
+defined('EVENT_PRIORITY_HIGH')  || define('EVENT_PRIORITY_HIGH', 10);
+```
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+This ensures the constants are only defined if they haven’t been already.
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+---
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+### 3. Set Up Environment Configuration
 
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
+- Copy the file `.env.example` or `env` to `.env`:
+
+```bash
+cp env .env
+```
+
+- Edit `.env` and update your base URL and database configuration:
+
+```dotenv
+app.baseURL = 'http://localhost:8080'
+database.default.database = web-lanjut
+```
+
+---
+
+## ⚙️ Important Change with `index.php`
+
+Starting from CodeIgniter 4, `index.php` is now located inside the `/public` folder.
+This improves security by keeping your core system and app files outside of the web root.
+
+> ✅ You should configure your web server's document root to point to `/public`, not the root of your project.
+
+---
+
+## 💡 Notes on Updates
+
+To update the framework:
+
+```bash
+composer update
+```
+
+Check the release notes to see if any changes are required to your `app/` folder.
+You may need to merge files from `vendor/codeigniter4/framework/app` into your own app directory.
+
+---
+
+## 📦 Server Requirements
+
+- PHP version 7.4 or higher
+- Enabled PHP extensions:
+
+  - `intl`
+  - `curl` (libcurl)
+  - `json` (default)
+  - `mbstring`
+  - `mysqlnd`
+  - `xml` (default)
+
+---
+
+## 🧩 Repository Management
+
+- Bug reports and development tasks are tracked in the [main repository](https://github.com/codeigniter4/CodeIgniter4/issues).
+- For **support** and **feature discussions**, visit our [official forum](http://forum.codeigniter.com).
+
+---
+
+Let me know if kamu ingin README-nya versi Bahasa Indonesia juga, atau ingin tambahan badge GitHub (build passing, license, dll).
