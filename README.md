@@ -1,7 +1,3 @@
-Berikut versi yang **rapih dan lebih profesional** dari README GitHub kamu, lengkap dengan penulisan kode yang sesuai (menggunakan triple backticks \`\`\` untuk syntax highlighting):
-
----
-
 # CodeIgniter 4 Application Starter
 
 ## What is CodeIgniter?
@@ -126,5 +122,4 @@ You may need to merge files from `vendor/codeigniter4/framework/app` into your o
 - For **support** and **feature discussions**, visit our [official forum](http://forum.codeigniter.com).
 
 ---
-
-Let me know if kamu ingin README-nya versi Bahasa Indonesia juga, atau ingin tambahan badge GitHub (build passing, license, dll).
+ 
