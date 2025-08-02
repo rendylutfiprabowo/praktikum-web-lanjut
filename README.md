@@ -1,3 +1,9 @@
+# 💻 Assignment 1 - Advanced Web Programming Lab
+
+This repository contains the source code for **Assignment 1** of the **Praktikum Web Lanjut** course.
+
+---
+
 # CodeIgniter 4 Application Starter
 
 ## What is CodeIgniter?
@@ -89,19 +95,6 @@ This improves security by keeping your core system and app files outside of the 
 
 ---
 
-## 💡 Notes on Updates
-
-To update the framework:
-
-```bash
-composer update
-```
-
-Check the release notes to see if any changes are required to your `app/` folder.
-You may need to merge files from `vendor/codeigniter4/framework/app` into your own app directory.
-
----
-
 ## 📦 Server Requirements
 
 - PHP version 7.4 or higher
@@ -122,4 +115,3 @@ You may need to merge files from `vendor/codeigniter4/framework/app` into your o
 - For **support** and **feature discussions**, visit our [official forum](http://forum.codeigniter.com).
 
 ---
- 
