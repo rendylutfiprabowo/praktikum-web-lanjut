@@ -53,8 +53,8 @@ require_once SYSTEMPATH . 'Config/DotEnv.php';
 
 $app = Config\Services::codeigniter();
 $app->initialize();
-$context = is_cli() ? 'php-cli' : 'web';
-$app->setContext($context);
+// $context = is_cli() ? 'php-cli' : 'web';
+// $app->setContext($context);
 
 /*
  *---------------------------------------------------------------

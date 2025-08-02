@@ -2,7 +2,6 @@
 <?= $this->section('content'); ?>
 
 
-
 <div class="p-4">
     <h3>Data Mahasiswa</h3>
     <br><br>
@@ -45,5 +44,5 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-    <?= $this->endsection('content'); ?>
 </div>
+<?= $this->endsection('content'); ?>

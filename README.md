@@ -2,7 +2,26 @@
 
 ## What is CodeIgniter?
 
-database = weblanjut2022.sql
+how to set-up?
+
+1. download .zip file
+2. open terminal in your directory file
+3. run "composer install" not "composer update"
+4. open file vendor\codeigniter4\framework\system\Events\Events.php
+5. change from :
+   '''
+   define('EVENT_PRIORITY_LOW', 200);
+   define('EVENT_PRIORITY_NORMAL', 100);
+   define('EVENT_PRIORITY_HIGH', 10);
+   ''''
+   to:
+   '''
+   defined('EVENT_PRIORITY_LOW') || define('EVENT_PRIORITY_LOW', 200);
+   defined('EVENT_PRIORITY_NORMAL')|| define('EVENT_PRIORITY_NORMAL', 100);
+   defined('EVENT_PRIORITY_HIGH') || define('EVENT_PRIORITY_HIGH', 10);
+   '''
+   
+   database = web-lanjut
 
 CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
 More information can be found at the [official site](http://codeigniter.com).
@@ -32,11 +51,11 @@ and any database settings.
 
 ## Important Change with index.php
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
+`index.php` is no longer in the root of the project! It has been moved inside the _public_ folder,
 for better security and separation of components.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
+This means that you should configure your web server to "point" to your project's _public_ folder, and
+not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter _public/..._, as the rest of your logic and the
 framework are exposed.
 
 **Please** read the user guide for a better explanation of how CI4 works!
